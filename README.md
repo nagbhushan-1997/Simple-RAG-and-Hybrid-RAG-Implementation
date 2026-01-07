@@ -105,5 +105,44 @@ Hybrid retrieval results are re-ranked using an LLM to:
 - Remove redundant or noisy passages  
 - Improve answer precision and faithfulness  
 
+## Comparison Summary
+
+| Aspect              | Simple RAG | Hybrid RAG |
+|---------------------|------------|------------|
+| Semantic Recall     | High       | High       |
+| Keyword Precision   | Low        | High       |
+| Robustness          | Medium     | High       |
+| Hallucination Risk  | Higher     | Lower      |
+| Query Coverage      | Limited    | Broad      |
+
+---
+
+## Use Cases
+
+- Document-based Question Answering  
+- Research on Retrieval-Augmented Generation  
+- Enterprise Knowledge Assistants  
+- Foundation for Agentic RAG systems  
+- Academic benchmarking and experimentation  
+
+---
+
+## Future Work
+
+- Agentic RAG integration  
+- Multi-modal document support  
+- Faithfulness and citation evaluation  
+- Multi-vector and hierarchical retrieval  
+- Production-ready modularization  
+
+---
+
+## Author
+
+**Nagbhushan Subbapurmath**    
+Data Scientist – Dassault Systèmes  
+
+**Research Focus:**  
+RAG, Multimodal AI, Text Summarisation, Multimodal RAG, Faithfulness Evaluation
 
 
