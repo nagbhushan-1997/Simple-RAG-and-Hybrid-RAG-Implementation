@@ -30,5 +30,80 @@ simple-hybrid-rag/
 └── assets/
     └── architecture_diagrams/
 
+```
+
+
+## Technology Stack
+
+| Component          | Technology             |
+|-------------------|------------------------|
+| LLM               | Mistral                |
+| Framework         | LangChain              |
+| Vector Store      | ChromaDB               |
+| Sparse Retrieval  | BM25                   |
+| Embeddings        | LangChain Embeddings   |
+| Document Loader   | PyPDF                  |
+| Language          | Python 3.10+           |
+
+
+## Install Required dependencies
+
+```
+pip install -r requirements.txt
+```
+
+## This Project Uses Mistral AI API
+
+Your your own AI API Keys for better output, we have used the mistral ai api free for research.
+
+```
+from google.colab import userdata
+mistral_api_key = userdata.get("Mistral_API")
+```
+
+## RAG Architectures
+
+### Simple RAG
+
+#### Pipeline
+- Load and chunk documents  
+- Generate dense embeddings  
+- Store embeddings in ChromaDB  
+- Retrieve top-k relevant chunks  
+- Generate response using an LLM  
+
+#### Strengths
+- Simple to implement  
+- Strong semantic recall  
+
+#### Limitations
+- Weak on exact keyword matching  
+- Higher hallucination risk  
+
+---
+
+### Hybrid RAG
+
+#### Pipeline
+- Dense retrieval (Embeddings + ChromaDB)  
+- Sparse retrieval (BM25)  
+- Combine results from both retrievers  
+- LLM-based re-ranking  
+- Context-aware response generation  
+
+#### Strengths
+- Handles both semantic and keyword queries  
+- Improved factual grounding  
+- Reduced hallucination  
+
+---
+
+## Re-ranking Strategy
+
+Hybrid retrieval results are re-ranked using an LLM to:
+- Select the most relevant context chunks  
+- Remove redundant or noisy passages  
+- Improve answer precision and faithfulness  
+
 
 
