@@ -1,5 +1,5 @@
 # Simple and Hybrid Retrieval-Augmented Generation (RAG)
-## > **Note:** If GitHub fails to render the notebook, please download and run it locally or open it in Google Colab.
+## > **Note:** If GitHub fails to render the notebook, please download and run it locally or download & open it in Google Colab.
 
 ## Overview
 
